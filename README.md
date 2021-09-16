@@ -1,7 +1,7 @@
 # ShiroRceTool
 Simple checker and exploit for Shiro RCE. (一个简单的Shiro RCE检测和利用脚本。)
 
-![](img\img1.png)
+![](img/img1.png)
 
 ## 声明 WARNING
 * 仅供安全人员验证,测试是否存在此漏洞。  
