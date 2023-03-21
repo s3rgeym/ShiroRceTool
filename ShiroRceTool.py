@@ -8,7 +8,7 @@ Contact :   Hack3rHan@protonmail.com
 """
 import argparse
 
-from core.Checker import Checker
+from core.Scanner import Scanner
 from core.Exploit import Exploit
 
 
@@ -27,10 +27,10 @@ if __name__ == '__main__':
     print(banner)
 
     parse = argparse.ArgumentParser()
-    parse.add_argument('-m', '--mode', help='exploit or check', action='store')
+    parse.add_argument('-m', '--mode', help='"exploit" or "scan".', action='store')
     parse.add_argument('-u', '--url', help='URL of the target.', action='store')
     parse.add_argument('-c', '--cmd', help='Command to execute.', action='store')
-    parse.add_argument('-e', '--echo', help='Echo Command.', action='store_true')
+    parse.add_argument('-e', '--echo', help='Echo mode.', action='store_true')
     
 
     options = parse.parse_args()
@@ -38,8 +38,8 @@ if __name__ == '__main__':
     if options.mode == 'exploit':
         exp = Exploit(url=options.url, cmd=options.cmd, echo=options.echo)
         exp.run()
-    elif options.mode == 'check':
-        checker = Checker(url=options.url, is_tomcat=True)
-        checker.run()
+    elif options.mode == 'scan':
+        scanner = Scanner(url=options.url, echo=True)
+        scanner.run()
     else:
         parse.print_help()
